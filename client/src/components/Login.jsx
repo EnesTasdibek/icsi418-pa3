@@ -17,7 +17,7 @@ import axios from 'axios'
 //If the credentials match, the application must display a successful login message.
 //If the credentials do not match, the application must display an appropriate login failure message.
 
-function Login(){
+function Login({ onLogin }){   
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -29,6 +29,7 @@ function Login(){
             if (res.data) {
                 //credentials match, the application displays a successful login message
                 alert('Login Successful')
+                onLogin(res.data)   
             }
             else {
                 //if the credentials do not match the application displays an appropriate login failure message
@@ -36,7 +37,7 @@ function Login(){
             }
         })
         .catch((err) => {
-    if (err.response) {
+    if (err.response) {//correctly shows the message gotten from the backend
         alert(err.response.data)
     } else {
         //server not running
@@ -46,7 +47,7 @@ function Login(){
 }
 
 return (
-    <div>
+    <div className="stack">
       <h2>Login</h2>
       <input
         type="text"

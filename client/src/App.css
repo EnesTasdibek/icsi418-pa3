@@ -183,7 +183,64 @@
     border-right-color: var(--border);
   }
 
-
-  
+}
+/* Members box: centered on the page, contents left-aligned */
+.members-box {
+  background: var(--social-bg); 
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
 }
 
+/* One member per row: name on the left, Remove button on the right */
+.members {
+  list-style: none;
+  padding: 0;
+}
+
+.members li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+/* Project list table centered on the page */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table-wrap table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.table-wrap th,
+.table-wrap td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+/* Create Project form with each label above its box, with space between fields */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stack h2 {
+  text-align: center;
+}

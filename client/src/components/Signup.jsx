@@ -52,7 +52,7 @@ if (response.ok) {
 }
 }
   return (
-    <div>
+    <div className="stack">
       <h2>Sign Up</h2>
       <input
         type="text"
